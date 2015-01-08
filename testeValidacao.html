@@ -19,6 +19,18 @@
 
         <h5>Teste de validação de form utilizando Foundation:</h5>
         <form method="post" data-abide>
+            <div class="password-field">
+                <label>Password <small>required</small>
+                  <input type="password" id="password" required pattern="[a-zA-Z]+">
+                </label>
+                <small class="error">Your password must match the requirements</small>
+              </div>
+              <div class="password-confirmation-field">
+                <label>Confirm Password <small>required</small>
+                  <input type="password" required pattern="[a-zA-Z]+" data-equalto="password">
+                </label>
+                <small class="error">The password did not match</small>
+              </div>
                   <div class="row">
                     <div class="large-12 columns">
                       <label>Input Label</label>
@@ -27,7 +39,7 @@
                   </div>
                   <div class="row">
                     <div class="large-4 medium-4 columns">
-                      <label>E-mail:</label>
+                      <label>E-mail <small>Obrigatório</small></label>
                       <input type="email" required placeholder="large-4.columns" />
                       <small class="error">Ops! Precisamos de um-email :)</small>
                     </div>
